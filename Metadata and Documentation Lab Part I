@@ -1,2 +1,38 @@
 ### Group B
-# A Culinary Collection
+# Home Cookery
+Home Cookery is a digital library within the Library of the International Pro-Hobbyists' Association. We collect, organize, and provide access to contemporary cookbooks for home cooking. We invite and encourage home chefs, food enthusiasts, culinary students, and food anthropologists to make use of our collections.
+
+## Functional Requirements  
+Users will want to be able to do the following:  
+1. search the database by title of cookbook and/or author
+2. search the database by name of cuisine
+3. search the database by names of dishes
+4. search the database by types of ingedients (vegetarian, meat, or dairy)
+6. search the database by method of cooking (e.g., baking, frying, microwaving, etc.)
+7. search the database by kitchen appliance (e.g., oven, airfryer, microwave, etc.)
+9. sort search results by difficulty level of recipe (novice, intermediate, expert)
+12. limit searches by type of ingredients (vegetarian, meat, or dairy)
+17. limit searches by difficulty level of recipes (novice, intermediate, expert)
+13. limit searches by date-range of cookbooks 
+
+## Metadata Application Profile (MAP)
+
+| Column | Field | Cardinality | Obligation | Content Guidelines | Mapping to Dublin Core | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| A | Title | One value allowed | Required | Enter title and subtitle of book | Title | |
+| B | Author | Multiple values allowed | Required | Last name, First name; Separate multiple authors with semicolons (;) | Creator | Author who wrote the book, not who digitized it |
+| C | Cuisine | Multiple values allowed | Not required | Enter all the cuisines included in the cookbook (place or culture of origin, or place or culture it is inspired by) separated by semicolons (;)| Genre | Only relevant for cookbooks with recipes that are clearly categorized into cuisines|
+| D | Dish | Multiple values allowed | Not required | Enter the names of all the dishes that the cookbook provides recipes for | Subject | Only relevant for cookbooks with clearly named recipes of dishes, not for cookbooks that provide instruction on general techniques|
+| E | Ingredients | Up to three values allowed | Required | Enter plant-based, meat, and/or diary, for whichever of these are included in the recipes in the cookbook, separated by semicolons (;) | Subject | |
+| F | Method | Multiple values allowed | Not required | Enter type of food preparation that is the primary focus of cookbook, if any (e.g., baking, frying, microwaving, etc.) | | This is only relevant for cookbooks that are primarily devoted to one type of food preparation|
+| G | Appliance | Multiple values allowed | Not required | Enter the primary kitchen appliance that the recipes in the cookbook require, if any (e.g., oven, airfryer, microwave, etc.) | | This is only relevant for cookbooks specialized for particular appliances|
+| H | Difficulty | One value allowed | Required | Enter "Novice" or "Intermediate" or "Expert" based on the difficulty level of the recipes in the cookbook | | Since this is a subjective qualifier, consensus between team members will be required |
+| I | Year | One value allowed | Required | Enter year of publication of cookbook in YYYY | Date | |
+
+## Example Metadata Record based on MAP
+
+| A | B | C | D | E | F | G | H | I |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Title | Author | Cuisine | Dish | Ingredients | Method | Appliance | Difficulty | Year |
+Cooking at Home Or, How I Learned to Stop Worrying About Recipes (and Love My Microwave) | Chang, David; Krishna, Priya | Western; Asian | | Meat; Vegetarian| Microwaving; Braising; Raw; Stir-Frying; Pickling | Microwave | Easy | 2021 |
+
